@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!--指定数据库驱动包-->
+    <classPathEntry location="C:\Users\Administrator\.m2\repository\mysql\mysql-connector-java\5.1.47\mysql-connector-java-5.1.47.jar" />
+
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+        <!--数据库连接参数-->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/ydma"
+                        userId="root"
+                        password="123456">
+        </jdbcConnection>
+
+        <javaTypeResolver >
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+    <!--指定实体类-->
+        <javaModelGenerator targetPackage="cn.ysf.ydma.entity" targetProject="E:\idea_workspace\ydma\ydma-user\src\main\java">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+    <!--指定SQL定义文件-->
+        <sqlMapGenerator targetPackage="test.xml"  targetProject="E:\idea_workspace\ydma\ydma-user\src\main\resources">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+     <!--指定Mapper映射接口-->
+        <javaClientGenerator type="ANNOTATEDMAPPER" targetPackage="cn.ysf.ydma.dao"  targetProject="E:\idea_workspace\ydma\ydma-user\src\main\java">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+    <!--指定根据那些表生成实体类,SQL定义,Mapper映射接口-->
+        <table tableName="user" domainObjectName="User"
+               enableSelectByExample="false"
+               enableDeleteByExample="false"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+
+        >
+
+        </table>
+
+    </context>
+</generatorConfiguration>

@@ -1,0 +1,8 @@
+cn\ysf\ydma\entity\YdmaResult.class
+cn\ysf\ydma\controller\UserController.class
+cn\ysf\ydma\dao\UserMapper.class
+cn\ysf\ydma\RunUserBoot.class
+cn\ysf\ydma\dao\UserSqlProvider.class
+cn\ysf\ydma\service\UserService.class
+cn\ysf\ydma\entity\User.class
+cn\ysf\ydma\service\UserServiceImp.class
